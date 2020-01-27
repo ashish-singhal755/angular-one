@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<nav class="navbar navbar-default header">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand timer" href="#" style="margin-left:25%"><img src="assets/images/avatar.png"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a class="timer" title="Home"><img src="assets/images/home.png"></a></li>
+      <li><a class="timer" (click)="dashboard()" title="Way to dashboard"><img src="assets/images/dashboard.png"></a></li>
+      <li class="timer">{{displayTimer}}</li>
+      <li><a (click)="logout()"  class="fadeIn fourth" title="logout"><img src="/assets/images/logout.png"></a></li>
+    </ul>
+  </div>
+</nav>

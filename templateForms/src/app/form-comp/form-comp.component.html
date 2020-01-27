@@ -1,0 +1,35 @@
+<p>form-comp works!</p>
+<div *ngFor="let a of user">
+    <li *ngIf="a==1">ngIf Condition matched : {{a}} </li>
+    <li *ngIf="a!=1">ngIf Condition not matched: {{a}} </li>
+
+</div>
+
+<br>
+<p>============= Template Driven Fom with Data binding===============</p>
+<form #ft="ngForm" (ngSubmit)="onSubmit(ft)">
+    Name : <input type="text" [ngClass]="{'red-alert': nam.invalid }" required [(ngModel)]="message.name" name="name" #nam="ngModel">
+    <br/> <br/>
+    Mob: <input type="text" [ngStyle]="{'border':mob.invalid?'1px solid red':'1px solid green'}" required [(ngModel)]="message.mob" name="mob" #mob="ngModel">
+    <br/>    <br/>
+    <div [hidden]="nam.valid" class="alert alert-danger">**Name is Required.</div>
+    <div [hidden]="mob.valid" class="alert alert-danger">**Mobile is required.</div>
+    <button [disabled]="!ft.valid" >Submit</button>
+   
+</form>
+
+<br><br>
+
+<p>============= Template Driven Fom without Data binding===============</p>
+<form #f="ngForm" (ngSubmit)="onSubmitt(f)" >
+    Name : <input type="text" [ngClass]="{'red-alert': nam.invalid }" required ngModel name="name1" #nam1="ngModel">
+    <br/> <br/>
+    Mob: <input type="text" [ngStyle]="{'border':mob.invalid?'1px solid red':'1px solid green'}" required ngModel name="mob1" #mob1="ngModel">
+    <br/>    <br/>
+    <div [hidden]="nam1.valid" class="alert alert-danger">**Name is Required.</div>
+    <div [hidden]="mob1.valid" class="alert alert-danger">**Mobile is required.</div>
+    <button [disabled]="!f.valid" >Submit</button>
+    
+</form>
+
+

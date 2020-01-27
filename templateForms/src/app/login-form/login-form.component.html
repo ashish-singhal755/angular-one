@@ -1,0 +1,31 @@
+<!-- <body >
+<p>============= Login Form==============</p>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+    <label>Login Name : <input type="text" [ngStyle]="{'border':name.invalid?'1px solid red':'1px solid green'}" required ngModel 
+    name="name" #name="ngModel" appForbiddenName="bob"></label>
+     <div [hidden]="name.valid" class="alert-danger" >is Required.</div>
+    <br/> <br/>
+    Mob: <input type="text" [ngStyle]="{'border':mob.invalid?'1px solid red':'1px solid green'}" 
+    required ngModel name="mob" #mob="ngModel" appValidatorDirc minlength="10" maxlength="10" >
+    <div [hidden]="mob.valid" class="alert-danger"> is required.</div>
+    <br/>    <br/>
+    <button [disabled]="!f.valid" > Go To Home </button>    
+</form>
+</body> -->
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <h2 class="active"> Sign In </h2>
+      <div class="fadeIn first">
+        <img src="/assets/images/user.png" id="icon" alt="User Icon" />
+      </div>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+        <label><input type="text" class="fadeIn second" required ngModel 
+            name="name" #name="ngModel" placeholder="Login Name"></label>
+        <input type="text" required ngModel class="fadeIn third" placeholder="Mobile" name="mob" 
+        #mob="ngModel" appValidatorDirc minlength="10" maxlength="10" >
+        <input type="submit" [disabled]="!f.valid" class="fadeIn fourth" value="Log In">
+      </form>
+    </div>
+  </div>
+

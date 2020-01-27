@@ -1,0 +1,14 @@
+<form> 
+<div class="wrapper fadeInDown">
+    <div id="formContent" style="margin-top:2%;margin-bottom: 1.5%;">
+      <h2 class="active" style="margin-top:5%">User Details</h2>
+      <div class="fadeIn first" style="margin-top:2.5%; margin-bottom: 2.5%;"> 
+        <img src="/assets/images/user.png" id="icon" alt="User Icon" />
+      </div>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" style="margin-bottom: 5%;">
+        <label for="loginName"><input type="text" disabled class="fadeIn second" value="{{loginName}}" ></label>
+        <label for="mobile"><input type="text" disabled  class="fadeIn third" placeholder="Mobile" value="{{mobile}}"></label>
+      </form>
+    </div>
+  </div>
+</form> 
