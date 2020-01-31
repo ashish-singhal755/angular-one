@@ -4,8 +4,6 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <nav class="navbar navbar-default header">
   <div class="container-fluid">
@@ -14,8 +12,8 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a class="timer"></a></li>
-      <li><a href="#" class="timer" title="About Us"><img src="assets/images/aboutus.png"></a></li>
-      <li><a href="#" class="timer" title="Contact Us"><img src="assets/images/contactus.png"></a></li>
+      <li><a class="timer" (click)="aboutus()" title="About Us"><img src="assets/images/aboutus.png"></a></li>
+      <li><a class="timer" (click)="contactUs()" title="Contact Us"><img src="assets/images/contactus.png"></a></li>
     </ul>
   </div>
 </nav>

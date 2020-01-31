@@ -11,7 +11,6 @@ export class UserAccessguardGuard implements CanActivate {
     state: RouterStateSnapshot): boolean  {
       console.log("login Name in authguard : " + sessionStorage.getItem("loginName"));
       console.log("Mobile in authguard : " + sessionStorage.getItem("mobile"));
-      //alert(sessionStorage.getItem("loginName") + " , " + sessionStorage.getItem("mobile"))
       if(sessionStorage.getItem("loginName") != null && sessionStorage.getItem("mobile") != null ){
         return true;
       }

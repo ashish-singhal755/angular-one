@@ -14,6 +14,9 @@ import { MyPipePipe } from './my-pipe.pipe';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderCompComponent } from './header-comp/header-comp.component';
 import { FooterCompComponent } from './footer-comp/footer-comp.component';
+import { AlertModule } from 'ngx-bootstrap';
+import { ContactusCompComponent } from './contactus-comp/contactus-comp.component';
+import { AboutusCompComponent } from './aboutus-comp/aboutus-comp.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +29,16 @@ import { FooterCompComponent } from './footer-comp/footer-comp.component';
     MyPipePipe,
     HomePageComponent,
     HeaderCompComponent,
-    FooterCompComponent
+    FooterCompComponent,
+    ContactusCompComponent,
+    AboutusCompComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    AlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]

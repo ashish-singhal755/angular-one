@@ -4,8 +4,6 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <nav class="navbar navbar-default header">
   <div class="container-fluid">
@@ -15,7 +13,10 @@
     <ul class="nav navbar-nav">
       <li class="active"><a class="timer" title="Home"><img src="assets/images/home.png"></a></li>
       <li><a class="timer" (click)="dashboard()" title="Way to dashboard"><img src="assets/images/dashboard.png"></a></li>
-      <li class="timer">{{displayTimer}}</li>
+      <li class="timer">
+        {{displayTimer| date : 'MMM d, y, h:mm:ss a'}}
+
+      </li>
       <li><a (click)="logout()"  class="fadeIn fourth" title="logout"><img src="/assets/images/logout.png"></a></li>
     </ul>
   </div>

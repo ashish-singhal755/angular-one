@@ -20,8 +20,8 @@
         <img src="/assets/images/user.png" id="icon" alt="User Icon" />
       </div>
       <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
-        <label><input type="text" class="fadeIn second" required ngModel 
-            name="name" #name="ngModel" placeholder="Login Name"></label>
+        <input type="text" class="fadeIn second" required ngModel 
+            name="name" #name="ngModel" placeholder="Login Name">
         <input type="text" required ngModel class="fadeIn third" placeholder="Mobile" name="mob" 
         #mob="ngModel" appValidatorDirc minlength="10" maxlength="10" >
         <input type="submit" [disabled]="!f.valid" class="fadeIn fourth" value="Log In">
