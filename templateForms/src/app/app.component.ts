@@ -7,11 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'templateForms';
-  arr : any = [1,8,6,100,10,600];
-
-  ngOnInit()
-  {
-    console.log(this.arr.sort((a,b) =>a - b));
-  }
+constructor(){}  
 }
-

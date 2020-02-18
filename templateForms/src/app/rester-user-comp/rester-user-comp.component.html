@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <div id="formContent"> 
+    <div *ngIf="!isSuccess">
+      <h2 class="active"> Registration Form </h2>
+      <div class="fadeIn first">
+        <img src="/assets/images/registration.png" id="icon" alt="User Icon" />
+      </div>
+      <form #regF="ngForm" (ngSubmit)="submit(regF)" >
+        <label><input type="text" class="fadeIn second" #login="ngModel" ngModel required name="login" placeholder="Login Name" ></label>
+       
+        <div [hidden]="login.valid" class="fontRed" >Name is mandatory.</div>
+       <label> <input type="text" class="fadeIn third" [pattern]="mobNumberPattern" #mobile="ngModel" ngModel appValidatorDirc minlength="10" required name="mobile" maxlength="10" placeholder="Mobile"></label>
+       <div [hidden]="mobile.valid" class="fontRed" >Mobile is mandatory.</div>
+        <label><input type="text" email="true" class="fadeIn second" required ngModel name="email" #email="ngModel" placeholder="Email Id"></label>
+        <div [hidden]="email.valid" class="fontRed" >Email is mandatory.</div>
+        <label><input type="password" ngModel class="fadeIn second" required placeholder="Password" name="password" #password="ngModel" ></label>
+        <div [hidden]="password.valid" class="fontRed" >Password is mandatory.</div>
+        <input type="submit" [disabled]="!regF.valid" class="fadeIn fourth" value="Register">
+      </form>
+    </div>
+      <div *ngIf="isSuccess">
+        <h2 class="active"> Awesome </h2>
+        <div class="fadeIn first" style="margin-top: 5%;">
+          <img src="/assets/images/tick.png" id="icon" alt="Success Icon" />
+        </div>
+       <label class="successmsg"> Your registration has been completed successfully with email id - {{email}}.</label>
+      </div>
+    </div>
+  </div>

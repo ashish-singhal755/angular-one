@@ -11,8 +11,8 @@
       <a class="navbar-brand timer" href="#" style="margin-left:25%"><img src="assets/images/avatar.png"></a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a class="timer" title="Home"><img src="assets/images/home.png"></a></li>
-      <li><a class="timer" (click)="dashboard()" title="Way to dashboard"><img src="assets/images/dashboard.png"></a></li>
+      <li class="active"><a (click)="gotoHome()" class="timer" title="Home"><img src="assets/images/home.png"></a></li>
+      <li><a class="timer" (click)="dashboard()" title="User Registraton"><img src="assets/images/dashboard.png"></a></li>
       <li class="timer">
         {{displayTimer| date : 'MMM d, y, h:mm:ss a'}}
 

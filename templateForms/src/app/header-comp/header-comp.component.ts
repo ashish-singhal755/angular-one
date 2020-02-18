@@ -31,6 +31,11 @@ export class HeaderCompComponent implements OnInit {
 
   dashboard()
   { 
-    this.router.navigate(['/home/a/b/dashboard'])
+    this.router.navigate(['/home/dashboard'])
+  }
+
+  gotoHome()
+  {
+    this.router.navigate(['/home'])
   }
 }

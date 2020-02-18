@@ -17,6 +17,7 @@ import { FooterCompComponent } from './footer-comp/footer-comp.component';
 import { AlertModule } from 'ngx-bootstrap';
 import { ContactusCompComponent } from './contactus-comp/contactus-comp.component';
 import { AboutusCompComponent } from './aboutus-comp/aboutus-comp.component';
+import { ResterUserCompComponent } from './rester-user-comp/rester-user-comp.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AboutusCompComponent } from './aboutus-comp/aboutus-comp.component';
     HeaderCompComponent,
     FooterCompComponent,
     ContactusCompComponent,
-    AboutusCompComponent
+    AboutusCompComponent,
+    ResterUserCompComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ import { AboutusCompComponent } from './aboutus-comp/aboutus-comp.component';
     CommonModule,
     AlertModule
   ],
-  providers: [],
+  providers:[],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

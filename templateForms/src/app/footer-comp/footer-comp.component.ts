@@ -14,10 +14,10 @@ export class FooterCompComponent implements OnInit {
   }
 
   contactUs(){
-    this.router.navigate(['/home/a/b/contactus'])
+    this.router.navigate(['/home/contactus'])
   }
 
   aboutus(){
-    this.router.navigate(['/home/a/b/aboutus'])
+    this.router.navigate(['/home/aboutus'])
   }
 }

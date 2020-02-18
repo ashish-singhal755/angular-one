@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { UserServiceService } from '../service/user-service.service';
 
 @Component({
   selector: 'app-home-page',
@@ -9,12 +10,21 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class HomePageComponent implements OnInit {
   loginName;
   mobile;
-  constructor(private router:Router,private route: ActivatedRoute) { }
+  obj:any[];
+  constructor(private router:Router,private route: ActivatedRoute, private userSrvc:UserServiceService) { }
 
   ngOnInit() {
-    console.log("&&&&&&&&&&&" + this.route.snapshot.paramMap.get('name') + "::" +this.route.snapshot.paramMap.get('mob') );
-    this.loginName=this.route.snapshot.paramMap.get('name');
-  this.mobile=this.route.snapshot.paramMap.get('mob');
+    this.obj = JSON.parse(sessionStorage.getItem('userList'));
+    
+  console.log(" list size : " + this.obj.length)
+ 
+ this.obj.forEach(item => { 
+  console.log("loginName : " + item.loginName + " mobile : " + item.mobile + " email : " + item.email + " password : " + item.password )
+});
+
+    console.log("&&&&&&&&&&&" + this.userSrvc.getLoginName() + "::" +this.userSrvc.getMobile() );
+    this.loginName=this.userSrvc.getLoginName();
+  this.mobile=this.userSrvc.getMobile();
   
   console.log("login : " + this.loginName)
   console.log("mobile : " + this.mobile)
