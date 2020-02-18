@@ -15,9 +15,9 @@ export class HeaderCompComponent implements OnInit {
   constructor(private router:Router) { }
   displayTimer : any ;
   time = new Observable(observer => {  
-             setInterval(() => {       
-              observer.next(new Date());  
-           }, 1000);    });
+    setInterval(() => {       
+    observer.next(new Date());  
+    }, 1000);    });
     
   ngOnInit() {
     this.time.subscribe(x => {this.displayTimer= x})
