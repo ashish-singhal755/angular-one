@@ -30,6 +30,10 @@ export class HomePageComponent implements OnInit {
   console.log("mobile : " + this.mobile)
   }
 
-  
+  editUser(user:any){
+    console.log("name : " + user.loginName)
+sessionStorage.setItem('user' , JSON.stringify(user));
+this.router.navigate(['/home/dashboard'])
+  }
 
   }
