@@ -6,7 +6,9 @@
         <img src="/assets/images/registration.png" id="icon" alt="User Icon" />
       </div>
       <form #regF="ngForm" (ngSubmit)="submit(regF)" >
-        <label><input type="text" class="fadeIn second" required placeholder="Login Name" #loginName="ngModel" [(ngModel)]="login" name="login" [value]="user?.loginName"></label>
+        <label><input type="text" class="fadeIn second" required placeholder="Login Name" 
+          
+          #loginName="ngModel" [(ngModel)]="login" name="login" [value]="user?.loginName"></label>
         <div [hidden]="loginName.valid" class="fontRed" >Name is mandatory.</div>
        <label> <input type="text" class="fadeIn third" [pattern]="mobNumberPattern" #mobile1="ngModel" [(ngModel)]="mobile" appValidatorDirc minlength="10" [value]="user?.mobile" required name="mobile" maxlength="10" placeholder="Mobile"></label>
        <div [hidden]="mobile1.valid" class="fontRed" >Mobile is mandatory.</div>

@@ -6,6 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MyPipePipe implements PipeTransform {
 
+
+  
   transform(array): any {
     return array.filter(val => val % 2 === 0 );
   }

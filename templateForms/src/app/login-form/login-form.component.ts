@@ -17,11 +17,13 @@ constructor(private router: Router, private userSer:UserServiceService) { }
   
 
 ngOnInit() { 
+
   sessionStorage.setItem("userList",JSON.stringify(this.obj));
 }
   onSubmit(f:NgForm) { 
     sessionStorage.setItem("loginName",f.value.name);
     sessionStorage.setItem("mobile", f.value.mob);
+    
   console.log("User Input loginName : " + f.value.name + " , mobile : " + f.value.mob);
   
   this.obj.forEach(item => { 
