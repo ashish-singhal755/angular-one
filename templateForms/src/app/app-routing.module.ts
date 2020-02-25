@@ -12,13 +12,14 @@ import { ResterUserCompComponent } from './rester-user-comp/rester-user-comp.com
 
 const routes: Routes = [
   { path: '', component: LoginFormComponent },
-  { path: 'home', component: HomeCompComponent,  children: [
+  { path: 'home', component: HomeCompComponent,  
+  children: [
     { path: 'dashboard', component: ResterUserCompComponent },
     { path: 'contactus', component: ContactusCompComponent },
     { path: 'aboutus', component: AboutusCompComponent },
     { path: '', component:HomePageComponent  }
-  ],canActivate:[UserAccessguardGuard] }
-  
+  ],canActivate:[UserAccessguardGuard]
+ }
 ];
 
 @NgModule({

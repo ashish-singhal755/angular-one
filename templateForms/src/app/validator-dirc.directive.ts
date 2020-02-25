@@ -5,6 +5,7 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 })
 export class ValidatorDircDirective {
 
+  
   constructor(private el:ElementRef) { }
 //events should be input , keyup, keypress
   @HostListener ('input') validate(){

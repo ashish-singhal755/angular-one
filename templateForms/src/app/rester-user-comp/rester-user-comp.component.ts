@@ -21,11 +21,14 @@ isSuccess:boolean;
 errorMsg:any="";
 ngOnInit() {
   this.user=JSON.parse(sessionStorage.getItem('user'));
+  if(this.user)
+  {
   console.log("loginname : " + this.user.loginName)
   this.login=this.user.loginName;
   this.mobile=this.user.mobile;
   this.email = this.user.email;
-  this.password = this.user.password;
+  this.password = this.user.password; 
+}
  }
 
 submit(regForm:NgForm){
@@ -36,13 +39,15 @@ submit(regForm:NgForm){
   this.password = regForm.value.password;
   this.obj = JSON.parse(sessionStorage.getItem('userList'));
   console.log(" list size : " + this.obj.length)
-
+  if(this.user)
+  {
   this.obj.forEach(item => { 
     if ( (this.user.loginName == item.loginName) && (this.user.mobile == item.mobile ) && (this.user.email == item.email) && (this.user.password == item.password) )
     {
       this.obj.splice(this.obj.indexOf(item),1);
     }
   });
+}
 
   this.obj.forEach(item => { 
     if ( (this.login == item.loginName) && (this.mobile == item.mobile ) && (this.email == item.email) )
