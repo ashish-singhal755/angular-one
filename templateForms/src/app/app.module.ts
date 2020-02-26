@@ -18,6 +18,8 @@ import { AlertModule } from 'ngx-bootstrap';
 import { ContactusCompComponent } from './contactus-comp/contactus-comp.component';
 import { AboutusCompComponent } from './aboutus-comp/aboutus-comp.component';
 import { ResterUserCompComponent } from './rester-user-comp/rester-user-comp.component'
+import {HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
+import { CommonInterceptor } from './common-Interceptor';
 
 @NgModule({
   declarations: [
@@ -40,9 +42,10 @@ import { ResterUserCompComponent } from './rester-user-comp/rester-user-comp.com
     AppRoutingModule,
     FormsModule,
     CommonModule,
-    AlertModule
+    AlertModule,
+    HttpClientModule
   ],
-  providers:[],
+  providers:[{provide: HTTP_INTERCEPTORS, useClass: CommonInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

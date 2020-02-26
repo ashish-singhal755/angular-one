@@ -28,7 +28,11 @@
         #mob="ngModel" appValidatorDirc minlength="10" maxlength="10" >
         <div [hidden]="mob.valid" class="fontRed" >Mobile is mandatory.</div>
         <input type="submit" [disabled]="!f.valid" class="fadeIn fourth" value="Log In">
-        <div class="fontRed" style="padding-bottom: 15px;">{{error}}</div>
+        <div class="fontRed" style="padding-bottom: 15px;">{{error}}
+        <div *ngFor="let number of numberArray | myPipe ">
+          {{number.name}}
+        </div>
+        </div>
       </form>
     </div>
   </div>
