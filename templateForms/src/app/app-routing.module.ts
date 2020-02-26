@@ -8,6 +8,7 @@ import { UserAccessguardGuard } from './user-accessguard.guard';
 import { AboutusCompComponent } from './aboutus-comp/aboutus-comp.component';
 import { ContactusCompComponent } from './contactus-comp/contactus-comp.component';
 import { ResterUserCompComponent } from './rester-user-comp/rester-user-comp.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -23,7 +24,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), HttpClientModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
