@@ -20,7 +20,7 @@ constructor(private router: Router, private userSer:UserServiceService, private 
   
 
 ngOnInit() { 
-  this.http.get("https://reqres.in/api/users/2").subscribe(data => console.log(JSON.stringify(data)));
+  this.http.get("https://reqres.in/api/users/2").subscribe(data => console.log(JSON.stringify(data)), error => console.log("Found error", error));
   sessionStorage.setItem("userList",JSON.stringify(this.obj));
 }
   onSubmit(f:NgForm) { 
