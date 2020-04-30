@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.14",
     "bootstrap": "^3.4.1",
     "g": "^2.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0",
     "ngx-bootstrap": "^5.3.2",
     "rxjs": "~6.4.0",
